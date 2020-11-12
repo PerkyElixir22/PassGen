@@ -2,14 +2,14 @@
 os.execute("if not exist config mkdir config")
 -- Write config help file to configInfo.txt
 cfgInfo = io.open("config/configInfo.txt", 'w')
-cfgInfo:write("line 1: Maximum password length\nline 2: Minimum password length\nline 3/4: The characters to use")
+cfgInfo:write("line 1: Maximum password length\nline 2: Minimum password length\nline 3/4: The characters to use\n")
 cfgInfo:close()
 -- Checks if config exists, if not it makes it.
 cfgCheck = io.open("config/config.cfg", r)
 if cfgCheck == nil then
   cfgCheck = nil
   cfg = io.open("config/config.cfg", 'w')
-  cfg:write("64\n8\n33\n126")
+  cfg:write("64\n8\n33\n126\n")
   cfg:close()
 else
   cfgCheck:close()
