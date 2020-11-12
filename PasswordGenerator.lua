@@ -1,3 +1,5 @@
+-- Checks if config folder exists, if not it makes one.
+os.execute("if not exist config mkdir config")
 -- Write config help file to configInfo.txt
 cfgInfo = io.open("config/configInfo.txt", 'w')
 cfgInfo:write("line 1: Maximum password length\nline 2: Minimum password length\nline 3/4: The characters to use")
